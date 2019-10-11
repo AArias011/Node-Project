@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
-fetch('https://reqres.in/api/users?page=2')
+fetch('https://reqres.in/api/users')
 .then(response => response.json())
 .then(data => {
     console.log(data)
@@ -21,7 +21,7 @@ fetch('https://reqres.in/api/users?page=2')
 
 app.engine('handlebars', expbs({ 
     defaultLayout: 'main', 
-    layoutsDir: path.join(__dirname, 'views/mainLayout')
+    // layoutsDir: path.join(__dirname, 'views/mainLayout')
 }));
 
 app.set('view engine', 'handlebars');
@@ -38,7 +38,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.render('about', { title:'About Me',
+    res.render('about', { 
+    title:'About Me',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui praesentium iusto eveniet nostrum commodi nobis consectetur velit non cupiditate itaque consequatur magni, quod deserunt hic dolor nam, saepe architecto sed nesciunt, eius labore. Non aut temporibus quae consequatur facilis, vitae deserunt sit iusto cum aliquam. Dignissimos nam ipsum, accusamus dolores sed veritatis natus soluta eius corporis, quae libero rerum cum necessitatibus, officia incidunt. Consectetur numquam assumenda ipsa? Quisquam repudiandae animi quidem asperiores totam illo dolorem in saepe, maiores maxime laboriosam reprehenderit. Omnis quod autem tempore nesciunt sunt ea ullam delectus.'
 });
 });
