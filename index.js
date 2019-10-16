@@ -22,12 +22,7 @@ app.set('view engine', 'handlebars');
 
 //Routing
 app.get('/', (req, res) => {
-    var data = fetch('https://reqres.in/api/users')
-.then(response => response.json())
-.then(data => {
-    console.log(data)
-    app.use(express.static())
-});
+    
     res.render('index', { 
         title:'Home Page', 
         name : 'Anthony Arias',
@@ -37,6 +32,23 @@ app.get('/', (req, res) => {
 });
 });
 
+app.get('/contact', (req, res) => {
+
+fetch('https://reqres.in/api/users?page=2')
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+
+
+    // app.use(express.static())
+res.render('contact', {
+        data: json.data
+    });
+
+});
+
+    
+})
 app.get('/about', (req, res) => {
 
 
@@ -52,4 +64,12 @@ app.get('/dashboard', (req, res) =>{
     })
 })
 
-
+app.get('/lookup', (req, res) => {
+    res.render('lookup', {
+        user: {
+            username: 'ntharias',
+            age:18,
+            phone:3453453453
+        },
+    });
+})
