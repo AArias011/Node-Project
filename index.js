@@ -17,6 +17,7 @@ app.engine('handlebars', expbs({
 }));
 app.set('view engine', 'handlebars');
 
+app.use(express.static('public'));
 
 const get_data = async (url,templateNameString, res) => {
     try{

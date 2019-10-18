@@ -1,0 +1,38 @@
+div.byron{
+    background:pink;
+}
+
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.925);
+}
+
+li {
+    display: inline;
+}
+
+#nav li {
+    list-style-type: none;
+    display: block;
+    width: 15%;
+    float: right;
+    text-decoration: none;
+    text-align: center;
+    padding: 25px 20px 20px 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+#nav a {
+    position: relative;
+    color: red;
+    font-size: 3vh;
+    text-decoration: none;
+}
+
