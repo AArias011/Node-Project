@@ -1,5 +1,5 @@
 div.byron{
-    background:pink;
+    background:black;
 }
 
 
@@ -15,7 +15,7 @@ li {
 #nav li {
     list-style-type: none;
     display: block;
-    width: 15%;
+    width: 17%;
     float: right;
     text-decoration: none;
     text-align: center;
@@ -36,3 +36,15 @@ ul {
     text-decoration: none;
 }
 
+footer{
+        background-color: rgba(0, 0, 0, 0.925);
+        padding: 8px;
+        color: red;
+        text-align: center;
+        margin-top: 184px;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
